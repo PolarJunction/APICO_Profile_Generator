@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APICO Profile Generator</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="light-theme">
+    <div class="card">
+        <div class="card-title"> APICO Profile Generator</div>
+        <div class="card-content">
+            <div class="card-photo">
+                <canvas class="main-canvas" id="npcBust" width="128" height="128" style="border:1px solid #000000;"> </canvas>
+            </div>
+            <div class="selectors">
+                <div class="pair">
+                    <button class="nextHair button pair-item"> Hair</button>
+                    <div id="hairColButtons"></div>
+                </div>
+                <div class="pair">
+                    <button class="nextShirt button pair-item"> Shirt </button>
+                    <div class="stack">
+                        <div id="shirtColButtons"></div>
+                        <div id="patternColButtons"></div>
+                    </div>
+                </div>
+                <div class="pair">
+                    <button class="nextHead button"> Skin </button>
+                    <button class="nextEyes button"> Eyes </button>
+                    <button class="nextBackground button"> Background</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button href="#" class="generate button"> Generate</button>
+        </div>
+        <div class="card-content">
+            <canvas id="npcBustSpr" width="64" height="36"></canvas>
+            <script src="app.js "></script>
+            <noscript>You need to enable JavaScript for this tool to work correctly.</noscript>
+</body>
+
+</html>
