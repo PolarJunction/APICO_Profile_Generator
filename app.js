@@ -6,6 +6,7 @@ const nxtShirt = document.querySelector('.nextShirt');
 const nxtHair = document.querySelector('.nextHair');
 const nxtEyes = document.querySelector('.nextEyes');
 const nxtBackground = document.querySelector('.nextBackground');
+const download = document.querySelector('.download');
 
 var PALETTE = {
     'green': ['#33847e', '#43ad9c', '#77cab3', '#bde5d3'],
@@ -45,6 +46,20 @@ nxtShirt.addEventListener('click', () => inc("pattern"));
 nxtHair.addEventListener('click', () => inc("hair"));
 nxtEyes.addEventListener('click', () => inc("eyes"));
 nxtBackground.addEventListener('click', () => inc("background"));
+
+download.addEventListener('click', function(e) {
+    let canvasUrl = document.getElementById('npcBust').toDataURL();
+    const createEl = document.createElement('a');
+    createEl.href = canvasUrl;
+
+    // This is the name of our downloaded file
+    createEl.download = "my_apico_profile.png";
+
+    // Click the download button, causing a download, and then remove it
+    createEl.click();
+    createEl.remove();
+});
+
 
 function inc(className) {
     if (++curSel[className] >= totalSprites[className]) curSel[className] = 0;
