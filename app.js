@@ -30,7 +30,7 @@ var totalSprites = {
     "head": 4,
     "eyes": 4,
     "pattern": 3,
-    "background": 3
+    "background": 10
 }
 
 var curSel = { "hair": 0, "head": 0, "eyes": 0, "pattern": 0, "background": 0}
